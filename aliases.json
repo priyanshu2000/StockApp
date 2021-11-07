@@ -1,0 +1,12 @@
+{
+    "@api": "./src/api",
+    "@components": "./src/components",
+    "@elements": "./src/elements",
+    "@config": "./src/config",
+    "@constants": "./src/constants",
+    "@src": "./src",
+    "@navigation": "./src/navigation",
+    "@screens": "./src/screens",
+    "@contexts": "./src/contexts",
+    "@hooks": "./src/hooks"
+}
