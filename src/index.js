@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import { View, Text } from 'react-native';
 import RNBootSplash from 'react-native-bootsplash';
+
+import AppNavigator from '@navigation';
 
 const App = () => {
   useEffect(() => {
@@ -8,9 +9,9 @@ const App = () => {
   }, []);
 
   return (
-    <View>
-      <Text>StockApp</Text>
-    </View>
+    <>
+      <AppNavigator />
+    </>
   );
 };
 
