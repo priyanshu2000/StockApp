@@ -1,19 +1,20 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import RNBootSplash from 'react-native-bootsplash';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { configureAxios } from '@config/axiosConifg';
 
 import AppNavigator from '@navigation';
 import theme from '@src/theme';
 
 const App = () => {
-  useEffect(() => {
-    RNBootSplash.hide({ fade: true });
-  }, []);
+  configureAxios();
 
   return (
-    <ThemeProvider theme={theme}>
-      <AppNavigator />
-    </ThemeProvider>
+    <SafeAreaProvider>
+      <ThemeProvider theme={theme}>
+        <AppNavigator />
+      </ThemeProvider>
+    </SafeAreaProvider>
   );
 };
 

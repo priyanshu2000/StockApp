@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   createStackNavigator,
   CardStyleInterpolators,
 } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
+import RNBootSplash from 'react-native-bootsplash';
+
 
 import { SCREEN_NAMES } from '@constants';
 import { Home, ViewStock } from '@screens';
@@ -11,6 +13,10 @@ import { Home, ViewStock } from '@screens';
 const Stack = createStackNavigator();
 
 const AppNavigator = () => {
+  useEffect(() => {
+    RNBootSplash.hide({ fade: true });
+  }, []);
+
   return (
     <NavigationContainer>
       <Stack.Navigator
