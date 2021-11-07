@@ -19,12 +19,13 @@ const TextInput = styled.TextInput.attrs(props => ({
 `;
 
 TextInput.defaultProps = {
-  color: 'darkGrey',
-  fontSize: 14,
+  color: 'white',
+  placeholderTextColor: 'white',
+  fontSize: 16,
   fontFamily: 'normal',
-  textAlignVertical: 'top',
   paddingTop: 0,
   paddingBottom: 0,
+  selectionColor: 'white',
 };
 
 export default TextInput;

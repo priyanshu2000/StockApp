@@ -15,7 +15,7 @@ const Text = styled.Text`
 `;
 
 Text.defaultProps = {
-  color: 'darkGrey',
+  color: 'textPrimary',
   fontSize: 14,
   fontFamily: 'normal',
 };
