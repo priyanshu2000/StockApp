@@ -4,6 +4,7 @@
     "paths": {
       "@api/*": ["./src/api/*"],
       "@components/*": ["./src/components/*"],
+      "@assets/*": ["./src/assets/*"],
       "@elements/*": ["./src/elements/*"],
       "@config/*": ["./src/config/*"],
       "@constants/*": ["./src/constants/*"],
