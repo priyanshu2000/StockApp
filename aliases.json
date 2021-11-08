@@ -8,6 +8,5 @@
     "@src": "./src",
     "@navigation": "./src/navigation",
     "@screens": "./src/screens",
-    "@contexts": "./src/contexts",
     "@hooks": "./src/hooks"
 }

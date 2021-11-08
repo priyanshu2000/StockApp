@@ -6,7 +6,6 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import RNBootSplash from 'react-native-bootsplash';
 
-
 import { SCREEN_NAMES } from '@constants';
 import { Home, ViewStock } from '@screens';
 

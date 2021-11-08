@@ -17,7 +17,7 @@ const Text = styled.Text`
 Text.defaultProps = {
   color: 'textPrimary',
   fontSize: 14,
-  fontFamily: 'normal',
+  fontFamily: 'Rubik-Regular',
 };
 
 export default Text;

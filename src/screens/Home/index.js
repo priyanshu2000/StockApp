@@ -6,7 +6,7 @@ import { Container } from '@components';
 import { useDebounce } from '@hooks';
 import { fetchSymbolListItems } from '@api';
 
-const Home = () => {
+const Home = ({ navigation }) => {
   const [searchText, setSearchText] = useState('');
   const [symbolList, setSymbolList] = useState([]);
   const [isFetching, setFetching] = useState(false);
@@ -33,7 +33,7 @@ const Home = () => {
     }
   };
 
-  const onClearButtonPress = () => {z
+  const onClearButtonPress = () => {
     setSymbolList([]);
     setSearchText('');
   };
@@ -42,6 +42,7 @@ const Home = () => {
     <View
       p={3}
       isButton
+      onPress={() => navigation.navigate('ViewStock', { item: item })}
       flexDirection="row"
       alignItems="center"
       justifyContent="space-between"
@@ -59,8 +60,8 @@ const Home = () => {
 
   return (
     <Container>
-      <SafeAreaView padding={2}>
-        <View>
+      <SafeAreaView flex={1} padding={2}>
+        <View flex={1}>
           <View
             bg="royalBlue"
             flexDirection="row"
@@ -74,8 +75,9 @@ const Home = () => {
               <Icon name="search" />
             )}
             <TextInput
-              placeholder="Search Symbol Ex: IBM"
+              placeholder="Search Symbol ex: IBM"
               width="80%"
+              autoFocus
               value={searchText}
               onChangeText={setSearchText}
             />

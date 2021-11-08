@@ -10,7 +10,7 @@ const SafeAreaView = styled(RNSafeAreaView)`
 
 SafeAreaView.defaultProps = {
   width: '100%',
-  paddingX: 2,
+  padding: 0,
   alignSelf: 'center',
 };
 
