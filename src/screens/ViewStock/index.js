@@ -86,18 +86,18 @@ const ViewStock = ({ route, navigation }) => {
                 {item['2. name']}
               </Text>
               <Text fontFamily="Rubik-SemiBold" fontSize={30} color="royalBlue">
-                ${stockDetails['05. price']}
+                ${stockDetails['05. price'] || 0}
               </Text>
               <View flexDirection="row" alignItems="center">
                 <Icon
                   name={increase ? 'trending-up' : 'trending-down'}
-                  color={increase ? 'green' : ' red'}
+                  color={increase ? 'green' : 'red'}
                   size={18}
                   mr={2}
                 />
                 <Text color={increase ? 'green' : ' red'}>
-                  {stockDetails['09. change']} {increase ? '+' : '-'}
-                  {stockDetails['10. change percent']}
+                  {stockDetails['09. change'] || 0} {increase ? '+' : ''}
+                  {stockDetails['10. change percent'] || '0%'}
                 </Text>
               </View>
             </View>
@@ -109,15 +109,15 @@ const ViewStock = ({ route, navigation }) => {
               alignItems="center"
               justifyContent="space-between">
               <View>
-                <Property title="Open" value={stockDetails['02. open']} />
-                <Property title="Low" value={stockDetails['04. low']} />
+                <Property title="Open" value={stockDetails['02. open'] || 0} />
+                <Property title="Low" value={stockDetails['04. low'] || 0} />
               </View>
               <View>
                 <Property
                   title="Previous Close"
-                  value={stockDetails['08. previous close']}
+                  value={stockDetails['08. previous close'] || 0}
                 />
-                <Property title="High" value={stockDetails['03. high']} />
+                <Property title="High" value={stockDetails['03. high'] || 0} />
               </View>
             </View>
           </View>
