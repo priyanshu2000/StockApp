@@ -5,6 +5,8 @@ after getting your own API key add that Key to '.env.development' file and you'r
 ![Screenshot-2](https://github.com/priyanshu2000/StockApp/blob/main/src/assets/images/Screenshot_2.jpg)
 ![Screenshot-1](https://github.com/priyanshu2000/StockApp/blob/main/src/assets/images/Screenshot_1.jpg)
 
+Demo - [Loom Recording](https://www.loom.com/share/a79b008d409a453aa7fd3a4a16843974)
+
 ## How to run the Project
 Before moving further i want you to know that this application is completely developed on a Linux machine and i didn't got the full access of Ios codebase to do configurations so there's chances that the IOS build might going to break so please try running Android build.
 
