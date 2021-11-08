@@ -11,7 +11,6 @@
       "@navigation/*": ["./src/navigation/*"],
       "@screens/*": ["./src/screens/*"],
       "@src/*": ["./src/*"],
-      "@contexts/*": ["./src/contexts/*"],
       "@hooks/*": ["./src/hooks/*"]
     }
   },
