@@ -53,6 +53,7 @@ const ViewStock = ({ route, navigation }) => {
           <PlaceholderLine width={25} height={30} />
           <PlaceholderLine width={25} height={30} />
         </View>
+        <PlaceholderLine width={25} height={30} />
       </Placeholder>
     </View>
   );
@@ -104,13 +105,14 @@ const ViewStock = ({ route, navigation }) => {
             <Text my={3} color="grey">
               Latest Trading day {stockDetails['07. latest trading day']}
             </Text>
-            <View
-              flexDirection="row"
-              alignItems="center"
-              justifyContent="space-between">
+            <View flexDirection="row" justifyContent="space-between">
               <View>
                 <Property title="Open" value={stockDetails['02. open'] || 0} />
                 <Property title="Low" value={stockDetails['04. low'] || 0} />
+                <Property
+                  title="Volume"
+                  value={stockDetails['06. volume'] || 0}
+                />
               </View>
               <View>
                 <Property

@@ -60,8 +60,8 @@ const Home = ({ navigation }) => {
 
   return (
     <Container>
-      <SafeAreaView padding={2}>
-        <View>
+      <SafeAreaView flex={1} padding={2}>
+        <View flex={1}>
           <View
             bg="royalBlue"
             flexDirection="row"
