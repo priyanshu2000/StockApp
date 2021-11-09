@@ -69,11 +69,7 @@ const ViewStock = ({ route, navigation }) => {
   return (
     <Container>
       <SafeAreaView>
-        <Header
-          canGoBack
-          title={stockDetails['01. symbol']}
-          navigation={navigation}
-        />
+        <Header canGoBack title={item['1. symbol']} navigation={navigation} />
         {isFetching ? (
           <Loader />
         ) : (
@@ -96,8 +92,10 @@ const ViewStock = ({ route, navigation }) => {
                   mr={2}
                 />
                 <Text color={trendingIconColor}>
-                  {stockDetails['09. change'] || 0} {hasIncreased ? '+' : ''}
-                  {stockDetails['10. change percent'] || '0%'}
+                  <Text>
+                    {stockDetails['09. change'] || 0} {hasIncreased ? '+' : ''}
+                    {stockDetails['10. change percent'] || '0%'}
+                  </Text>
                 </Text>
               </View>
             </View>
