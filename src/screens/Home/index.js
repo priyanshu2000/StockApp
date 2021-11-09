@@ -38,8 +38,9 @@ const Home = ({ navigation }) => {
     setSearchText('');
   };
 
-  const renderListItem = ({ item }) => (
+  const renderListItem = ({ item, index }) => (
     <View
+      key={index}
       p={3}
       isButton
       onPress={() => navigation.navigate('ViewStock', { item: item })}
@@ -88,7 +89,6 @@ const Home = ({ navigation }) => {
           <FlatList
             data={symbolList}
             renderItem={renderListItem}
-            keyExtractor={({ index }) => index}
             onScrollBeginDrag={() => Keyboard.dismiss()}
           />
         </View>
