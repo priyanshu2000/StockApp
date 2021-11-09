@@ -26,11 +26,10 @@ const ViewStock = ({ route, navigation }) => {
     }
   };
 
-  const increase =
-    stockDetails['10. change percent'] &&
-    stockDetails['10. change percent'].slice(0, -1) > 0
-      ? true
-      : false;
+  const hasIncreased =
+    stockDetails['09. change'] && stockDetails['09. change'] > 0;
+  const trendingIcon = hasIncreased ? 'trending-up' : 'trending-down';
+  const trendingIconColor = hasIncreased ? 'green' : 'red';
 
   const Loader = () => (
     <View p={2}>
@@ -91,13 +90,13 @@ const ViewStock = ({ route, navigation }) => {
               </Text>
               <View flexDirection="row" alignItems="center">
                 <Icon
-                  name={increase ? 'trending-up' : 'trending-down'}
-                  color={increase ? 'green' : 'red'}
+                  name={trendingIcon}
+                  color={trendingIconColor}
                   size={18}
                   mr={2}
                 />
-                <Text color={increase ? 'green' : ' red'}>
-                  {stockDetails['09. change'] || 0} {increase ? '+' : ''}
+                <Text color={trendingIconColor}>
+                  {stockDetails['09. change'] || 0} {hasIncreased ? '+' : ''}
                   {stockDetails['10. change percent'] || '0%'}
                 </Text>
               </View>
