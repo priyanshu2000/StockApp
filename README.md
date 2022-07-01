@@ -7,7 +7,7 @@ after getting your own API key add that Key to '.env.development' file and you'r
 
 
 ## How to run the Project
-Before moving further i want you to know that this application is completely developed on a Linux machine and i didn't got the full access of Ios codebase to do configurations so there's chances that the IOS build might going to break so please try running Android build.
+Before moving further i want you to know that this application is completely developed on a Linux machine and i didn't get the access of IOS codebase to do configurations so there's chances that the IOS build might going to break so please try running Android build.
 
 Also if you're running a react-native project for the very first time on your machine then please do checkout these [offical docs](https://reactnative.dev/docs/environment-setup).
 
